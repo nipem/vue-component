@@ -106,9 +106,9 @@ export default {
   },
   provide () {
     return {
-      addCarouselItem: this.addCarouselItem,
-      removeCarouselItem: this.removeCarouselItem,
-      isCarouselActive: this.isCarouselActive,
+      addSwiperItem: this.addSwiperItem,
+      removeSwiperItem: this.removeSwiperItem,
+      isSwiperActive: this.isSwiperActive,
       getTransition: this.getTransition
     }
   },
@@ -151,16 +151,16 @@ export default {
     getTransition () {
       return this.inverse ? this.prevTransition : this.nextTransition
     },
-    addCarouselItem (item) {
+    addSwiperItem (item) {
       const index = this.$children.indexOf(item)
       return index === -1 ? this.items.push(item) : this.items.splice(index, 0, item)
     },
-    removeCarouselItem (item) {
+    removeSwiperItem (item) {
       const index = this.items.indexOf(item)
       if (index === -1) return
       this.items.splice(index, 1)
     },
-    isCarouselActive (item) {
+    isSwiperActive (item) {
       return this.items.indexOf(item) === this.activeIndex
     },
     start () {

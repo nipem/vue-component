@@ -7,7 +7,7 @@
     :leave-active-class="transition['leave-active-class']"
     :leave-to-class="transition['leave-to-class']"
     >
-    <div class="slide-item" v-show="active" :style="style">
+    <div class="slide-item" v-show="active">
       <slot></slot>
     </div>
   </transition>
@@ -17,30 +17,24 @@
 export default {
   name: 'slide',
   inject: [
-    'addCarouselItem',
-    'removeCarouselItem',
-    'isCarouselActive',
+    'addSwiperItem',
+    'removeSwiperItem',
+    'isSwiperActive',
     'getTransition'
   ],
   computed: {
     active () {
-      return this.isCarouselActive(this)
+      return this.isSwiperActive(this)
     },
     transition () {
       return this.getTransition()
-    },
-    style () {
-      return {
-        'transition-timing-function': this.transitionTimingFunction,
-        'transition-duration': this.transitionDuration
-      }
     }
   },
   created () {
-    this.addCarouselItem(this)
+    this.addSwiperItem(this)
   },
   beforeDestroy () {
-    this.removeCarouselItem(this)
+    this.removeSwiperItem(this)
   }
 }
 </script>

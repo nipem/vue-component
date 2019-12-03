@@ -1,5 +1,8 @@
 # vue transitions
 
+- [x] support integrate with animate.css
+- [x] default transition is fadeIn
+
 ## transition
 
 default transition in `Swiper.vue`

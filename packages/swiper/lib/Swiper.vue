@@ -244,7 +244,8 @@ export default {
           deltaY < -this.minDistance && this.prev()
           deltaY > this.minDistance && this.next()
         }
-      } else {
+      }
+      if (this.direction === 'horizontal') {
         // horizontal direction
         if (Math.abs(deltaY) < this.ratio * Math.abs(deltaX)) {
           deltaX < -this.minDistance && this.next()

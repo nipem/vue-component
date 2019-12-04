@@ -1,3 +1,12 @@
+# swiper
+
+支持 [animate.css](https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css) 动画。默认 `fadeIn-fadeOut`。支持配置 slideX, slideY 等。
+
+>配置 slideX, slideY 需要自行拷贝或实现 css。
+
+## demo
+
+```html
 <template>
   <div id="app">
     <h2>Swiper component</h2>
@@ -79,24 +88,10 @@
       </section>
       <section>
         <h2>navigationEnabled: true & paginationEnabled: true</h2>
-        <p>active: {{active}}</p>
-        <swiper ref="custom-swiper" class="knpm-swiper" :navigationEnabled="true" :paginationEnabled="true" v-model="active">
+        <swiper class="knpm-swiper" :navigationEnabled="true" :paginationEnabled="true">
           <slide v-for="(image, index) of images" :key="index">
             <img :src="image" alt="" draggable="false">
           </slide>
-
-          <div class="absolute w-full flex items-center justify-center bottom-0 mb-1" slot="pagination">
-            <span>Custom pagination</span>
-            <ul class="swiper-pagination w-auto relative bottom-0">
-              <li
-                v-for="(value, index) of images.length"
-                :key="index"
-                class="swiper-pagination__dot bg-blue-600"
-                :class="index === active ? 'active' : ''"
-                @click="changeActiveIndex(index)">
-              </li>
-            </ul>
-          </div>
         </swiper>
       </section>
     </div>
@@ -121,25 +116,18 @@ export default {
   },
   data () {
     return {
-      images: [],
-      active: 0
+      images: []
     }
   },
   created () {
     setTimeout(() => {
       this.images = images
     }, 2000)
-  },
-  methods: {
-    changeActiveIndex (index) {
-      this.$refs['custom-swiper'].changeActiveIndex(index)
-    }
   }
 }
 </script>
 
 <style lang="css">
-/* @import url('../lib/transition/fade-in-x.css'); */
 @import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css');
 @import url('https://cdn.bootcss.com/tailwindcss/1.1.2/utilities.min.css');
 #app {
@@ -158,3 +146,4 @@ h2 {
   text-align: center;
 }
 </style>
+```

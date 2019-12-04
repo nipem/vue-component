@@ -1,0 +1,93 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Swiper component Default mounting properties should be able to autoplay by default 1`] = `
+<div class="swiper">
+  <div class="swiper-wrapper"></div>
+  <!---->
+  <!---->
+</div>
+`;
+
+exports[`Swiper component Default mounting properties should be able to loop by default 1`] = `
+<div class="swiper">
+  <div class="swiper-wrapper"></div>
+  <!---->
+  <!---->
+</div>
+`;
+
+exports[`Swiper component Default mounting properties should have 3 items when number of slides is 3 1`] = `
+<div class="swiper">
+  <div class="swiper-wrapper">
+    <div class="slide-item" enter-class="" enter-active-class="animated fadeIn" enter-to-class="" leave-class="" leave-active-class="animated fadeOut" leave-to-class=""></div>
+    <div class="slide-item" style="display: none;" enter-class="" enter-active-class="animated fadeIn" enter-to-class="" leave-class="" leave-active-class="animated fadeOut" leave-to-class=""></div>
+    <div class="slide-item" style="display: none;" enter-class="" enter-active-class="animated fadeIn" enter-to-class="" leave-class="" leave-active-class="animated fadeOut" leave-to-class=""></div>
+  </div>
+  <!---->
+  <!---->
+</div>
+`;
+
+exports[`Swiper component Default mounting properties should mount successfully 1`] = `
+<div class="swiper">
+  <div class="swiper-wrapper"></div>
+  <!---->
+  <!---->
+</div>
+`;
+
+exports[`Swiper component Default mounting properties should unmount successfully 1`] = `
+<div class="swiper">
+  <div class="swiper-wrapper"></div>
+  <!---->
+  <!---->
+</div>
+`;
+
+exports[`Swiper component Events should activeIndex be 0 when emit next at the last slide 1`] = `
+<div class="swiper">
+  <div class="swiper-wrapper">
+    <div class="slide-item" style="" enter-class="" enter-active-class="animated fadeIn" enter-to-class="" leave-class="" leave-active-class="animated fadeOut" leave-to-class=""></div>
+    <div class="slide-item" style="display: none;" enter-class="" enter-active-class="animated fadeIn" enter-to-class="" leave-class="" leave-active-class="animated fadeOut" leave-to-class=""></div>
+    <div class="slide-item" enter-class="" enter-active-class="animated fadeIn" enter-to-class="" leave-class="" leave-active-class="animated fadeOut" leave-to-class="" style="display: none;"></div>
+  </div>
+  <!---->
+  <!---->
+</div>
+`;
+
+exports[`Swiper component Events should activeIndex be 2 when emit changeActiveIndex(2) 1`] = `
+<div class="swiper">
+  <div class="swiper-wrapper">
+    <div class="slide-item" enter-class="" enter-active-class="animated fadeIn" enter-to-class="" leave-class="" leave-active-class="animated fadeOut" leave-to-class="" style="display: none;"></div>
+    <div class="slide-item" style="display: none;" enter-class="" enter-active-class="animated fadeIn" enter-to-class="" leave-class="" leave-active-class="animated fadeOut" leave-to-class=""></div>
+    <div class="slide-item" style="" enter-class="" enter-active-class="animated fadeIn" enter-to-class="" leave-class="" leave-active-class="animated fadeOut" leave-to-class=""></div>
+  </div>
+  <!---->
+  <!---->
+</div>
+`;
+
+exports[`Swiper component Events should activeIndex be 2 when emit next event twice 1`] = `
+<div class="swiper">
+  <div class="swiper-wrapper">
+    <div class="slide-item" enter-class="" enter-active-class="animated fadeIn" enter-to-class="" leave-class="" leave-active-class="animated fadeOut" leave-to-class="" style="display: none;"></div>
+    <div class="slide-item" style="display: none;" enter-class="" enter-active-class="animated fadeIn" enter-to-class="" leave-class="" leave-active-class="animated fadeOut" leave-to-class=""></div>
+    <div class="slide-item" style="" enter-class="" enter-active-class="animated fadeIn" enter-to-class="" leave-class="" leave-active-class="animated fadeOut" leave-to-class=""></div>
+  </div>
+  <!---->
+  <!---->
+</div>
+`;
+
+exports[`Swiper component Events should activeIndex be 2 when emit prev at the first slide 1`] = `
+<div class="swiper">
+  <div class="swiper-wrapper">
+    <div class="slide-item" enter-class="" enter-active-class="animated fadeIn" enter-to-class="" leave-class="" leave-active-class="animated fadeOut" leave-to-class="" style="display: none;"></div>
+    <div class="slide-item" style="display: none;" enter-class="" enter-active-class="animated fadeIn" enter-to-class="" leave-class="" leave-active-class="animated fadeOut" leave-to-class=""></div>
+    <div class="slide-item" style="" enter-class="" enter-active-class="animated fadeIn" enter-to-class="" leave-class="" leave-active-class="animated fadeOut" leave-to-class=""></div>
+  </div>
+  <!---->
+  <!---->
+</div>
+`;

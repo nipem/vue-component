@@ -34,6 +34,10 @@
 <script>
 export default {
   name: 'swiper',
+  model: {
+    props: 'active',
+    event: 'activechange'
+  },
   props: {
     active: {
       type: Number,
@@ -173,25 +177,23 @@ export default {
     },
     next () {
       if (this.nextDisabled) return
-      this.loopHandle()
-
+      let active
       if (this.activeIndex === this.items.length - 1) {
-        this.activeIndex = 0
+        active = 0
       } else {
-        this.activeIndex += 1
+        active = this.activeIndex + 1
       }
-      this.inverse = false
+      this.changeActiveIndex(active)
     },
     prev () {
       if (this.prevDisabled) return
-      this.loopHandle()
-
+      let active
       if (this.activeIndex === 0) {
-        this.activeIndex = this.items.length - 1
+        active = this.items.length - 1
       } else {
-        this.activeIndex -= 1
+        active = this.activeIndex - 1
       }
-      this.inverse = true
+      this.changeActiveIndex(active)
     },
     changeActiveIndex (index) {
       this.loopHandle()
@@ -199,6 +201,7 @@ export default {
         this.inverse = this.activeIndex > index
         this.activeIndex = index
       }
+      this.$emit('activechange', this.activeIndex)
     },
     onStart (e) {
       // detect right click

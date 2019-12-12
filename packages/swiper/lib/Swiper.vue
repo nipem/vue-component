@@ -183,6 +183,7 @@ export default {
       } else {
         active = this.activeIndex + 1
       }
+      this.inverse = false
       this.changeActiveIndex(active)
     },
     prev () {
@@ -193,15 +194,13 @@ export default {
       } else {
         active = this.activeIndex - 1
       }
+      this.inverse = true
       this.changeActiveIndex(active)
     },
     changeActiveIndex (index) {
       this.loopHandle()
-      if (index !== this.activeIndex) {
-        this.inverse = this.activeIndex > index
-        this.activeIndex = index
-      }
-      this.$emit('activechange', this.activeIndex)
+      this.activeIndex = index
+      this.$emit('activechange', index)
     },
     onStart (e) {
       // detect right click
